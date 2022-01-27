@@ -30,4 +30,5 @@ Route::prefix('pizza')
 ->controller(PizzaController::class)
 ->group(function() {
     Route::get('/','index')->name('pizza.index');
+    Route::get('/create','create')->name('pizza.create');
 });

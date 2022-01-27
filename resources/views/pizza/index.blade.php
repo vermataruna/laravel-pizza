@@ -33,19 +33,19 @@
                     <div class="form-inline mt-2 mt-2">
                         <div class="col-md-4 mb-3">
                           <label for="validationDefault01">Pizza Price($)</label>
-                          <input type="number" class="form-control" placeholder="Small pizza price">                        
+                          <input type="number" class="form-control" name="small_pizza_price" placeholder="Small pizza price">                        
                         </div>
                         <div class="col-md-4 mb-3">
-                            <input type="number" class="form-control" placeholder="Medium pizza price">
+                            <input type="number" class="form-control" name="medium_pizza_price" placeholder="Medium pizza price">
                         </div>
                         <div class="col-md-4 mb-3">
-                            <input type="number" class="form-control" placeholder="Large pizza price">
+                            <input type="number" class="form-control" name="large_pizza_price" placeholder="Large pizza price">
                         </div>
                     </div>
 
                     <div class="form-group mt-2">
                         <label for="category">Category</label>
-                            <select class="form-control">
+                            <select class="form-control" name="category ">
                                 <option value="vegetarian">Vegetarian Pizza</option>
                                 <option value="non-vegetarian">Non-vegetarian Pizza</option>
                                 <option value="mix">Mix Pizza</option>

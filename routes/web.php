@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PizzaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//Pizza Routes
+
+Route::prefix('pizza')
+->as('pizza.')
+->controller(PizzaController::class)
+->group(function() {
+    Route::get('/','index')->name('pizza.index');
+});

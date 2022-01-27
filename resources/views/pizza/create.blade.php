@@ -17,7 +17,8 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Pizza</div>
-
+                <form action="{{route('pizza.store')}}" method="post">
+                    @csrf
                 <div class="card-body">
 
                     <div class="form-group">
@@ -64,6 +65,7 @@
                     </div>
 
                 </div>
+            </form>
             </div>
     </div>
 </div>

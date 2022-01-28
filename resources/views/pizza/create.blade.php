@@ -17,7 +17,15 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Pizza</div>
-                <form action="{{route('pizza.store')}}" method="post">
+                @if(count($errors) > 0)
+                <div class="alert alert-danger">
+                    @foreach ($errors->all() as $error)
+                        <p>{{ $error }}</p> 
+                    @endforeach
+                </div>
+                @endif
+
+                <form action="{{route('pizza.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
                 <div class="card-body">
 
@@ -46,7 +54,7 @@
 
                     <div class="form-group mt-2">
                         <label for="category">Category</label>
-                            <select class="form-control" name="category ">
+                            <select class="form-control" name="category">
                                 <option value="vegetarian">Vegetarian Pizza</option>
                                 <option value="non-vegetarian">Non-vegetarian Pizza</option>
                                 <option value="mix">Mix Pizza</option>

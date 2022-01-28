@@ -68,8 +68,9 @@ class PizzaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {   
+        $pizza = Pizza::find($id); 
+        return view('pizza.edit', compact('pizza'));
     }
 
     /**

@@ -41,7 +41,7 @@
                                     <td>{{$pizza->medium_pizza_price}}</td>
                                     <td>{{$pizza->large_pizza_price}}</td>
                                     <td>
-                                        <button class="btn btn-primary">Edit</button>
+                                        <a href="{{route('pizza.edit', $pizza->id )}}"><button class="btn btn-primary">Edit</button></a>
                                         <button class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>

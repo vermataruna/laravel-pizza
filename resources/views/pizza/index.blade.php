@@ -29,6 +29,7 @@
                           </tr>
                         </thead>
                         <tbody>
+                            @if(count($pizzas) > 0)
                             @foreach ($pizzas as $key => $pizza)
                                 <tr>
                                     <th scope="row">{{$key+1}}</th>
@@ -44,7 +45,10 @@
                                         <button class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
-                          @endforeach
+                            @endforeach  
+                            @else
+                              <p>Nothing to show :(</p>
+                            @endif
                         </tbody>
                       </table>
 

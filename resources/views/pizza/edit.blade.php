@@ -14,8 +14,8 @@
                 </div>
                 @endif
 
-                <form action="{{route('pizza.store')}}" method="post" enctype="multipart/form-data">
-                    @csrf
+                <form action="{{route('pizza.update',$pizza->id)}}" method="post" enctype="multipart/form-data">
+                    @csrf @method('PUT')
                 <div class="card-body">
 
                     <div class="form-group">

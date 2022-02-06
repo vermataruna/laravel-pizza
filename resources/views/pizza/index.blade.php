@@ -6,8 +6,11 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">All Pizza</div>
-
+                
                 <div class="card-body">
+                    <a href="{{route('pizza.create')}}">
+                        <button class="btn btn-success mb-4" style="float: right">Add new</button>
+                    </a>
                     @if (session('message'))
                         <div class="alert alert-success" role="alert">
                             {{ session('message') }}
@@ -84,8 +87,10 @@
                             @endif
                         </tbody>
                     </table>
+
+                    {{$pizzas->links()}}
                 </div>
-                
+
             </div>
         </div>
     </div>

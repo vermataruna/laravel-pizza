@@ -27,6 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::prefix('pizza')
 ->as('pizza.')
+->middleware('auth','admin')
 ->controller(PizzaController::class)
 ->group(function() {
     Route::get('/','index')->name('index');

@@ -4,28 +4,11 @@ use App\Http\Controllers\PizzaController;
 use App\Http\Controllers\UserOrderController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name('frontpage');
 
 //Pizza Routes
-
 Route::prefix('pizza')
 ->as('pizza.')
 ->middleware('auth','admin')
@@ -40,7 +23,6 @@ Route::prefix('pizza')
 });
 
 //User Order Routes
-
 Route::prefix('order')
 ->as('user.')
 ->middleware('auth','admin')

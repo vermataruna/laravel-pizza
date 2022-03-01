@@ -83,4 +83,12 @@ class UserOrderController extends Controller
     {
         //
     }
+
+
+    public function changeStatus(Request $request, $id) {
+
+        Order::where('id', $id)->update(['status' => $request->status]);
+        return back();
+    }
+
 }

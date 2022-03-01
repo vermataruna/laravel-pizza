@@ -41,10 +41,11 @@ Route::prefix('pizza')
 
 //User Order Routes
 
-Route::prefix('user')
+Route::prefix('order')
 ->as('user.')
 ->middleware('auth','admin')
 ->controller(UserOrderController::class)
 ->group(function() {
     Route::get('/','index')->name('order');
+    Route::put('/{id}/status','changeStatus')->name('status');
 });

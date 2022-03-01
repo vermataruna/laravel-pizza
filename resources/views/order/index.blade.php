@@ -45,7 +45,8 @@
                             <td>{{$order->large_pizza}}</td>
                             <td>{{$order->message}}</td>
                             <td>{{$order->status}}</td>
-                            <form action="" method="POST">@csrf
+                            <form action="{{route('user.status',$order->id)}}" method="POST">
+                                @csrf @method('PUT')
                                 <td>
                                     <input type="submit" name="status" value="Accepted" class="btn btn-success"></button>
                                 </td>

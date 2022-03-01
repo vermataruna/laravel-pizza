@@ -38,7 +38,8 @@
                           <tr>
                             <th scope="row">1</th>
                             <td>{{$order->user->name}}</td>
-                            <td>{{$order->email}}</td>
+                            <td>{{$order->email}}<br>
+                                {{$order->phone }}</td>
                             <td>{{$order->date}}/{{$order->time}}</td>
                             <td>{{$order->pizza->name}}</td>
                             <td>{{$order->small_pizza}}</td>
